@@ -1,3 +1,5 @@
+// Program to send a specific MIDI message over a MIDI cable
+
 void setup() {
   // Connectionspeed for MIDI
   Serial.begin(31250);
@@ -16,6 +18,7 @@ void loop() {
   delay(1000);
 }
 
+// Methode to send a MIDI message over
 void sendMessage(byte byteOne, byte byteTwo, byte byteThree) {
   Serial.write(byteOne);
   Serial.write(byteTwo);
